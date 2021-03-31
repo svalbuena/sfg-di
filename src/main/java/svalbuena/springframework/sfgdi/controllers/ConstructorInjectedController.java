@@ -1,5 +1,6 @@
 package svalbuena.springframework.sfgdi.controllers;
 
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Controller;
 import svalbuena.springframework.sfgdi.services.GreetingService;
 
@@ -7,7 +8,7 @@ import svalbuena.springframework.sfgdi.services.GreetingService;
 public class ConstructorInjectedController {
     private final GreetingService greetingService;
 
-    public ConstructorInjectedController(final GreetingService greetingService) {
+    public ConstructorInjectedController(@Qualifier("constructorInjectedGreetingService") final GreetingService greetingService) {
         this.greetingService = greetingService;
     }
 

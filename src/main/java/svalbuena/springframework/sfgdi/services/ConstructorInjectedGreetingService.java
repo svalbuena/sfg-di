@@ -3,9 +3,9 @@ package svalbuena.springframework.sfgdi.services;
 import org.springframework.stereotype.Service;
 
 @Service
-public class GreetingServiceImpl implements GreetingService {
+public class ConstructorInjectedGreetingService implements GreetingService {
     @Override
     public String sayGreeting() {
-        return "Hi!";
+        return "Hi! (Constructor)";
     }
 }

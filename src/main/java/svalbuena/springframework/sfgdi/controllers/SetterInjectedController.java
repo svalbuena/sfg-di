@@ -1,6 +1,7 @@
 package svalbuena.springframework.sfgdi.controllers;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Controller;
 import svalbuena.springframework.sfgdi.services.GreetingService;
 
@@ -8,6 +9,7 @@ import svalbuena.springframework.sfgdi.services.GreetingService;
 public class SetterInjectedController {
     private GreetingService greetingService;
 
+    @Qualifier("setterInjectedGreetingService")
     @Autowired
     public void setGreetingService(final GreetingService greetingService) {
         this.greetingService = greetingService;
